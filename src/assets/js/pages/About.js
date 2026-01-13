@@ -5,3 +5,9 @@ async function loadArtisans() {
     console.log(artisans);
 }
 loadArtisans();
+
+document.querySelectorAll('.cta-buttons button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    alert('Action coming soon!');
+  });
+});u
