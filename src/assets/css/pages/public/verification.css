@@ -1,0 +1,52 @@
+body{
+    background-color: #f3f4f6;
+}
+.zaprun{
+    display: flex;
+    align-items:center;
+    font-size: 25px;
+}
+.logo{
+    width: 55px;
+}
+.name{
+    color: #1b4068;
+}
+.main{
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.enter{
+    font-size: 12px;
+}
+input{
+    width: 30px;
+    height: 30px;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid #e8eeff  ;
+    background-color: #e8eeff;
+}
+button{
+    background-color: blue;
+    color: #ffffff;
+    border-radius: 6px;
+    border: 2px solid blue;
+    width: 40vw;
+    padding: 6px;
+    cursor: pointer;
+}
+.code{
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+    gap: 10px;
+}
+.resend{
+    color: gold;
+}

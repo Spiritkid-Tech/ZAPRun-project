@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/pages/public/support.css">
+    <title>ZAPrun Support</title>
+</head>
+<body>
+      <div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="support-info">
+      <h2>24/7 Customer Support</h2>
+      <p>
+        Discuss your experience with us. Our team is always available
+        to respond to complaints and inquiries.
+      </p>
+
+      <div class="cards">
+        <div class="card" onclick="callPhone()">
+          <h4>Phone Number</h4>
+          <span>+234 800 000 0000</span>
+        </div>
+
+        <div class="card" onclick="sendEmail()">
+          <h4>Email</h4>
+          <span><a href="zaprun2025@gmail.com">zaprun2025@gmail.com</a></span>
+        </div>
+
+        <div class="card whatsapp" onclick="openWhatsApp()">
+          <h4>WhatsApp</h4>
+          <span>Chat with us instantly</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="support-form">
+      <h3>Send us a message</h3>
+
+      <input type="text" id="name" placeholder="Full name">
+      <input type="tel" id="phone" placeholder="Phone number">
+      <input type="email" id="email" placeholder="Email address">
+      <textarea id="message" placeholder="Add message"></textarea>
+
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://res.cloudinary.com/dlu3s3buv/image/upload/v1767965411/frame141i560-8m4m_xqfsna.svg" alt="ZAPrun Logo">
+                <p>ZAPrun</p>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Fund Account</a></li>
+                </ul>
+            </nav>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Compliance</a></li>
+                    <li><a href="#">Digital Services Act</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+  <script type="module" src="../../assets/js/pages/Contact.js"></script>
+</body>
+</html>
