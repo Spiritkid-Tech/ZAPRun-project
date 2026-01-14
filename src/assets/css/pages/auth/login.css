@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* Wrapper controls layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* Logo section */
+.zaprun {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.logo {
+    width: 55px;
+}
+
+.name {
+    color: #1b4068;
+}
+
+/* Card container */
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Social buttons */
+.social-login {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-button {
+    flex: 1;
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.social-button:nth-child(2) {
+    background-color: #db4437;
+}
+
+a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ MOBILE RESPONSIVENESS */
+@media (max-width: 480px) {
+    .wrapper {
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+    .zaprun {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 45px;
+    }
+
+    .container {
+        margin-top: 20px;
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .social-login {
+        flex-direction: column;
+    }
+
+    .social-button {
+        width: 100%;
+    }
+}

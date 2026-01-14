@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register as an Artisan</title>
+  <link rel="stylesheet" href="../../assets/css/pages/artisan/artisan registration.css" />
+</head>
+<body>
+
+  <div class="container">
+    <form class="form"
+    onsubmit="goToProfileReview(event)">
+
+      <h2>Register as an Artisan</h2>
+      <p class="subtitle">Fill in your information below</p>
+
+      <!-- Personal Info -->
+      <div class="grid">
+        <div>
+          <label>Full Name</label>
+          <input type="text" required />
+        </div>
+
+        <div>
+          <label>Phone Number</label>
+          <input type="tel" required />
+        </div>
+
+        <div>
+          <label>Date of Birth</label>
+          <input type="date" />
+        </div>
+
+        <div>
+          <label>Email Address</label>
+          <input type="email" required />
+        </div>
+
+        <div>
+          <label>Address</label>
+          <input type="text" />
+        </div>
+
+        <div>
+          <label>Nationality</label>
+          <select>
+            <option>Select</option>
+            <option>Nigerian</option>
+            <option>Ghanaian</option>
+            <option>Others</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Upload Documents -->
+      <h3>Upload your document</h3>
+
+      <div class="upload-group">
+        <label>Passport</label>
+        <input type="file">
+      </div>
+
+      <div class="upload-group">
+        <label>National ID Card</label>
+        <input type="file">
+      </div>
+
+      <div class="upload-group">
+        <label>Utility Bill</label>
+        <input type="file">
+      </div>
+
+      <!-- Proof of Work -->
+      <h3>Proof of Work</h3>
+      <p class="subtitle">Upload images showing your work experience</p>
+
+      <div class="grid">
+        <div>
+          <label>Area of Expertise</label>
+          <select>
+            <option>Select skill</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Carpenter</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div id="projects">
+        <div class="project">
+          <input type="text" placeholder="Project name">
+          <input type="file">
+        </div>
+      </div>
+
+      <button type="button" id="addProject" class="btn-secondary">
+        Add Project
+      </button>
+
+      <button type="submit" class="btn-primary">
+        Register
+      </button>
+
+    </form>
+  </div>
+
+  <script type="module" src="../../assets/js/pages/artisan registration.js"></script>
+</body>
+</html>

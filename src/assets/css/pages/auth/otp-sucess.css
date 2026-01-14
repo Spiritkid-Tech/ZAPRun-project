@@ -1,0 +1,62 @@
+body{
+    background-color: #f3f4f6;
+}
+.zaprun{
+    display: flex;
+    align-items:center;
+    font-size: 25px;
+}
+.logo{
+    width: 55px;
+}
+.name{
+    color: #1b4068;
+}
+.main{
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: grey;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius:10px ;
+    border: 2px solid grey;
+    padding: 6px;
+    width: 60vw;
+}
+button ul li{
+    list-style: none;
+}
+button ul li a{
+    color:#ffffff ;
+    text-decoration: none;
+}
+h1{
+    color: grey;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .main {
+    padding: 30px;
+  }
+
+  .zaprun {
+    align-self: flex-start;
+  }
+
+  button {
+    width: 100%;
+  }
+}
