@@ -54,3 +54,36 @@ button{
 .account{
     color: gold;
 }
+.signup-footer {
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+.terms-text {
+  color: #888; /* Gray color */
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.terms-text a {
+  color: #3f51b5; /* Blue color for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between box and text */
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* Optional: styling the checkbox itself */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
