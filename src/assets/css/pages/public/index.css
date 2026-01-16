@@ -17,6 +17,13 @@ body{
     display: flex;
     gap: 12px;
 }
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+.nav-links a:hover {
+    background-color: white;
+}
 .nav-links li{
     list-style-type: none;
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/pages/auth/login.css">
+    <title>ZAPrun Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="zaprun">
+            <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/chatgptimagedec302025102044am5380-i5up_igr7f6.svg" class="logo" alt="ZAPrun logo">
+            <h2 class="name">ZAPrun</h2>
+        </div>
+
+        <div class="container">
+            <h1>Welcome back</h1>
+            <p>Please input your details</p><br>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="fullname">full name</label>
+                    <input type="text" id="fullname" placeholder="Sam Tunde" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="password" id="password" placeholder="......" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+            </form>
+            <div class="social-login">
+                <p>or continue with</p>
+                <button class="social-button">Facebook</button>
+                <button class="social-button">Google</button>
+            </div>
+            <p>new here?</p>
+            <a href="../auth/signup.html">
+                <p>create an account</p>
+            </a>
+        </div>
+    </div>
+    <script type="module" src="../../assets/js/pages/login.js"></script>
+</body>
+</html>

@@ -20,4 +20,21 @@ fetch("https://backend-api/verify-otp", {
 
 const result = await response.json();
 
-if (response.ok) {}
+if (response.ok) {
+        otpMessage.style.color = "green";
+        otpMessage.textContent = "OTP verified successfully";
+
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1500);
+      } else {
+        otpMessage.style.color = "red";
+        otpMessage.textContent = result.message || "Invalid OTP";
+      }
+
+    } catch (error) {
+      otpMessage.style.color = "red";
+      otpMessage.textContent = "Network error. Try again.";
+    }
+  });
+}

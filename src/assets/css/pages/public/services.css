@@ -56,6 +56,9 @@ header {
   font-weight: 400;
   text-decoration: none;
 }
+.nav-links a:hover {
+  background-color: white;
+}
 
 .second {
   display: flex;
