@@ -14,30 +14,29 @@
     <div class="main">
         <div class="cat-1">
             <h2>OTP Verification</h2>
-            <p class="enter">Enter the code sent to your Email</p>
-
-        </div>
-        <div id="inputs">
-            <input type="text" maxlength="1">
-
-            <input type="text" maxlength="1">
-
-            <input type="text" maxlength="1">
-
-            <input type="text" maxlength="1">
-            
-            <input type="text" maxlength="1">
-            
-            <input type="text" maxlength="1"><br><br>
-
-            <button type="submit">Verify</button><br>
+            d<p class="enter">Enter the code sent to your Email</p>
         </div>
         
-        <p id="otpMsg"></p>
-        <div class="code">
-            <p>Didn't receive any code </p>
-            <p class="resend">Resend</p>
-        </div>
+        <!-- FORM -->
+    <form id="otpForm">
+      <div class="inputs">
+        <input type="text" maxlength="1" inputmode="numeric">
+        <input type="text" maxlength="1" inputmode="numeric">
+        <input type="text" maxlength="1" inputmode="numeric">
+        <input type="text" maxlength="1" inputmode="numeric">
+        <input type="text" maxlength="1" inputmode="numeric">
+        <input type="text" maxlength="1" inputmode="numeric">
+      </div>
+        
+        <button type="submit">Verify</button>
+    </form>
+
+    <p id="otpMsg"></p>
+
+    <div class="code">
+      <p>Didn't receive any code?</p>
+      <p class="resend" id="resendOtp">Resend</p>
+    </div>
     </div>
     <script type="module" src="../../assets/js/pages/otp-verification.js"></script>
 </body>

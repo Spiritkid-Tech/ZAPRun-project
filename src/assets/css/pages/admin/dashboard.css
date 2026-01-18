@@ -1,31 +1,47 @@
+/* ===============================
+   RESET & GLOBAL STYLES
+================================ */
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
 body {
   background: #f4f6f8;
+  color: #333;
 }
 
+/* ===============================
+   APP CONTAINER
+================================ */
 .app {
   display: flex;
   min-height: 100vh;
+  position: relative;
 }
 
-/* SIDEBAR */
+/* ===============================
+   SIDEBAR
+================================ */
 .sidebar {
   width: 230px;
   background: linear-gradient(#1b4068, #1b7f5c);
   color: white;
   padding: 20px;
+  flex-shrink: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 100;
 }
 
-.logo {
-  font-size: 22px;
+.sidebar .logo {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .sidebar nav a,
@@ -35,29 +51,37 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
   border-radius: 6px;
+  text-decoration: none;
+  color: white;
 }
 
 .sidebar nav a.active,
-.sidebar nav a:hover {
-  background: rgba(255,255,255,0.2);
+.sidebar nav a:hover,
+.sidebar-bottom a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-bottom {
   margin-top: auto;
 }
 
-/* MAIN */
+/* ===============================
+   MAIN CONTENT
+================================ */
 .main {
   flex: 1;
   padding: 20px;
 }
 
-/* TOPBAR */
+/* ===============================
+   TOPBAR
+================================ */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .topbar input {
@@ -67,7 +91,15 @@ body {
   border: 1px solid #ccc;
 }
 
-/* STATS */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===============================
+   STATS CARDS
+================================ */
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -79,9 +111,12 @@ body {
   background: white;
   padding: 20px;
   border-radius: 10px;
+  text-align: center;
 }
 
-/* CARD */
+/* ===============================
+   TABLE CARDS
+================================ */
 .card {
   background: white;
   border-radius: 10px;
@@ -95,7 +130,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -104,6 +138,7 @@ table {
 th, td {
   padding: 12px;
   border-bottom: 1px solid #eee;
+  text-align: left;
 }
 
 button {
@@ -115,20 +150,29 @@ button {
   cursor: pointer;
 }
 
-/* STATUS */
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===============================
+   STATUS BADGES
+================================ */
 .status {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
+  text-transform: capitalize;
 }
 
 .status.pending { background: orange; color: white; }
 .status.completed { background: green; color: white; }
 
-/* HAMBURGER */
+/* ===============================
+   HAMBURGER BUTTON
+================================ */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   background: none;
   border: none;
   color: #1b4068;
@@ -136,59 +180,72 @@ button {
   margin-right: 10px;
 }
 
-/* TOP LEFT */
-.top-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* OVERLAY */
+/* ===============================
+   OVERLAY
+================================ */
 .overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
   display: none;
-  z-index: 9;
+  z-index: 50;
 }
 
-/* MOBILE SIDEBAR BEHAVIOR */
+/* ===============================
+   MOBILE STYLES
+================================ */
 @media (max-width: 900px) {
 
+  /* Show hamburger */
   .hamburger {
     display: block;
   }
 
+  /* Sidebar hidden offscreen */
   .sidebar {
     position: fixed;
-    left: -250px;
     top: 0;
-    height: 100%;
-    width: 230px;
-    z-index: 10;
-    transition: left 0.3s ease;
-  }
-
-  .sidebar.active {
     left: 0;
+    transform: translateX(-100%);
+    height: 100%;
+    z-index: 100;
   }
 
+  /* Sidebar active */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Overlay active */
   .overlay.active {
     display: block;
   }
 
+  /* Hide topbar search */
   .topbar input {
     display: none;
   }
-}
 
-/* MOBILE */
-@media (max-width: 900px) {
+  /* Stats 2 columns on mobile */
   .stats {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .sidebar {
-    display: none;
+/* ===============================
+   SMALL DEVICES
+================================ */
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  th, td {
+    padding: 8px;
   }
 }
