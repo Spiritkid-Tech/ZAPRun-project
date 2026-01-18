@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZAPrun contact</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/pages/public/contact.css">
 </head>
 <body>
@@ -14,7 +12,6 @@
         <div class="logo">
             <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/chatgptimagedec302025102044am5380-i5up_igr7f6.svg" alt="company logo">
         </div>
-
         <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -25,36 +22,37 @@
     </nav>
     </header>
 
-    <section class="contact">
+    <main class="contact">
         <div class="contact-left">
             <h2>Get in touch <br> with us</h2>
-            <We>Our friendly team is here to help. Reach out by phone,email,or through our support desk.
+            <p>Our friendly team is here to help. Reach out by phone,email,or through our support desk.
                 We'll get back to you promptly and make your moving experiences smooth fom start to finish.</p>
         </div>
        
         <div class="cards">
-            <div class="card"><br>
+            <div class="card" id="phonecard"><br>
                 <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/phone5397-m7op_lendqd.svg" alt="phone icon">
                 <h3>Phone</h3>
-                <p>07032221110</p>
+                <<p id="phoneNumber">07032221110</p>
+
             </div>
 
-            <div class="card active"><br>
+            <div class="card active" id="emailCard"><br>
                 <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/email5404-gkh_j6vchp.svg" alt="email icon">
                 <h3>Email</h3>
-                <p><a href="zaprun2025@gmail.com">zaprun2025@gmail.com</a></p>
+                <p id="emailAddress"><a href="mailto:zaprun2025@gmail.com">zaprun2025@gmail.com</a></p>
             </div>
 
-            <div class="card"><br>
+            <div class="card" id="addressCard"><br>
                 <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/location5413-9b2p-200h_qsj89n.png" alt="location icon">
                 <h3>Address</h3>
-                <p>25,Coker street, GRA. Ikeja.</p>
+                <p id="officeAddress">25, Coker Street, Ikeja</p>
             </div>
 
-            <div class="card"><br>
+            <div class="card" id="hoursCard"><br>
                 <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/clock5419-r3k-200h_oib2hs.png" alt="clock icon"><br><br>
                 <h3>Hours of operation</h3>
-                <p>Monday - Sunday <br>7am - 6pm</p>
+                <p id="officeHours">Mon-Sun 7am - 6pm</p>
             </div>
 
             <div class="contact-right">
@@ -63,13 +61,11 @@
         </div>
         <section class="support-section">
             <div class="support-container">
-                <h4>24/7 SUPPORT DESK</h4>
-                <p>To contact our 24/7 support desk.
-                    <a href="support.html" class="support-link">Click here</a>
-                </p>
+             <h4>24/7 SUPPORT DESK</h4>
+                <p>To contact our 24/7 support desk: <a href="#" class="support-link">Click here</a></p>
             </div>
         </section>
-    </section>
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-logo">

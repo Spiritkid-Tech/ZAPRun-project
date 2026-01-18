@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: https:;
+    connect-src 'self' https://zapruntech.onrender.com;
+  "
+>
+
   <title>Artisan Dashboard</title>
 
   <!-- CSS FILE -->
@@ -34,55 +45,50 @@
 <main class="main">
 
   <!-- ===== TOP BAR ===== -->
-  <header class="top-bar">
-    <button class="menu-btn" aria-label="Toggle menu">☰</button>
-    
-    <div>
-      <h3>Welcome back, Adeyeye 👋</h3>
-      <p>See what’s happening today</p>
-    </div>
+   <!-- TOP BAR -->
+<header class="top-bar">
+  <button class="menu-btn">☰</button>
 
-    <div class="user-info">
-      <span class="status online">Online</span>
-      <img src="assets/avatar.png" alt="User Avatar">
-    </div>
-  </header>
+  <div>
+    <h3 id="welcomeText">Welcome back 👋</h3>
+    <p>See what’s happening today</p>
+  </div>
 
-  <!-- ===== STATS CARDS ===== -->
-  <section class="stats">
-    <div class="card">
-      <h4>Pending Jobs</h4>
-      <p>3</p>
-    </div>
+  <div class="user-info">
+    <span class="status online">Online</span>
+    <img id="avatar" src="assets/avatar.png" alt="User Avatar">
+  </div>
+</header>
 
-    <div class="card">
-      <h4>Jobs Today</h4>
-      <p>2</p>
-    </div>
+<!-- STATS -->
+<section class="stats">
+  <div class="card">
+    <h4>Pending Jobs</h4>
+    <p id="pendingJobs">0</p>
+  </div>
 
-    <div class="card">
-      <h4>Completed Jobs</h4>
-      <p>20</p>
-    </div>
+  <div class="card">
+    <h4>Jobs Today</h4>
+    <p id="jobsToday">0</p>
+  </div>
 
-    <div class="card">
-      <h4>Total Earnings</h4>
-      <p>₦500,000</p>
-    </div>
-  </section>
+  <div class="card">
+    <h4>Completed Jobs</h4>
+    <p id="completedJobs">0</p>
+  </div>
 
-  <!-- ===== JOB REQUEST ===== -->
-  <section class="job-card">
-    <h3>New Job</h3>
+  <div class="card">
+    <h4>Total Earnings</h4>
+    <p id="totalEarnings">₦0</p>
+  </div>
+</section>
 
-    <div class="job-details">
-      <img src="assets/avatar.png" alt="Client">
-      <div>
-        <h4>John Daniels</h4>
-        <p>Fix leaking kitchen sink pipe</p>
-        <p><strong>Price:</strong> ₦8,000</p>
-      </div>
-    </div>
+<!-- JOB REQUESTS -->
+<section class="job-card">
+  <h3>New Jobs</h3>
+  <div id="jobsContainer"></div>
+</section>
+
 
     <div class="job-actions">
       <button class="accept">Accept</button>
@@ -93,6 +99,6 @@
 </main>
 
 <!-- JS FILE -->
-<script type="module" src="../../assets/js/pages/dashboard.js"></script>
+<script src="../../assets/js/pages/dashboard.js"></script>
 </body>
 </html>

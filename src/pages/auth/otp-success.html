@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/pages/auth/otp-success.css">
+    <title>Otp-Successful</title>
+</head>
+<body>
+    <div class="zaprun">
+       <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/chatgptimagedec302025102044am5380-i5up_igr7f6.svg" class="logo" alt="ZAPrun Logo">
+       <h2 class="name">ZAPrun</h2>
+    </div>
+    <div class="main">
+        <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png"
+        alt="Successful"
+        class="success-icon"
+        >
+        
+        <h1>OTP Successful</h1>
+        
+        <button id="homepageBtn">
+            continue
+        </button>
+    </div>
+<script type="module" src="../../assets/js/pages/otp-success.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/pages/auth/otp-success.css">
+  <title>OTP Success</title>
+</head>
+<body>
+  <div class="success-container">
+    <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/chatgptimagedec302025102044am5380-i5up_igr7f6.svg" class="logo" alt="ZAPrun Logo">
+    <div class="main">
+        <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png"
+        alt="Successful"
+        class="success-icon"
+        >
+    </div>
+    <h2>OTP Verified!</h2>
+    <p>Your account has been successfully verified.</p>
+    <button id="continueBtn">Continue</button>
+  </div>
+
+  <script>
+    document.getElementById("continueBtn").addEventListener("click", () => {
+      // Redirect to login or dashboard
+      window.location.href = "../../pages/artisan/dashboard.html";
+      // user should go straight to dashboard after verification:
+    });
+  </script>
+</body>
+</html>

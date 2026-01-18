@@ -1,69 +1,107 @@
-const experts = [
-  {
-    name: "Fola David",
-    service: "plumber",
-    location: "lagos",
-    distance: 5,
-    rating: 4.8,
-    reviews: 356,
-    portfolio: []
-  },
-  {
-    name: "Calvin Ajayi",
-    service: "electrician",
-    location: "abuja",
-    distance: 10,
-    rating: 3.9,
-    reviews: 432,
-    portfolio: []
-  },
-  {
-    name: "Modupe Mariam",
-    service: "carpenter",
-    location: "ibadan",
-    distance: 20,
-    rating: 3.0,
-    reviews: 84,
-    portfolio: []
-  }
-];
+// ===============================
+// CONFIG
+// ===============================
+const API_BASE_URL = "https://zappruntech.onrender.com"; 
+// Example later: https://zaprun-api.onrender.com
 
 const expertsList = document.getElementById("expertsList");
 
-function loadExperts(data) {
+// ===============================
+// LOAD EXPERTS FROM BACKEND
+// ===============================
+async function loadExperts(filters = {}) {
+  try {
+    // Build query string dynamically
+    const params = new URLSearchParams(filters).toString();
+    const response = await fetch(`${API_BASE_URL}/experts?${params}`);
+
+    if (!response.ok) {
+      throw new Error("Failed to load experts");
+    }
+
+    const experts = await response.json();
+    renderExperts(experts);
+
+  } catch (error) {
+    expertsList.innerHTML = `<p>Unable to load experts.</p>`;
+    console.error(error);
+  }
+}
+
+// ===============================
+// RENDER EXPERTS
+// ===============================
+function renderExperts(experts) {
   expertsList.innerHTML = "";
 
-  data.forEach(expert => {
-    const portfolioHTML = expert.portfolio.length
-      ? `<div class="portfolio">${expert.portfolio.map(img => `<img src="${img}">`).join("")}</div>`
+  if (experts.length === 0) {
+    expertsList.innerHTML = "<p>No experts found.</p>";
+    return;
+  }
+
+  experts.forEach(expert => {
+    const portfolioHTML = expert.portfolio?.length
+      ? `
+        <div class="portfolio">
+          ${expert.portfolio.map(img =>
+            `<img src="${img}" alt="portfolio">`
+          ).join("")}
+        </div>
+      `
       : "";
 
     expertsList.innerHTML += `
       <div class="expert-card">
-        <img src="assets/avatar.png">
+        <img src="${expert.avatar || "assets/avatar.png"}" alt="expert">
         <h3>${expert.name}</h3>
         <p>${expert.service}</p>
-        <div class="rating">⭐ ${expert.rating} (${expert.reviews})</div>
+        <p>${expert.location}</p>
+
+        <div class="rating">
+          ⭐ ${expert.rating || 0} (${expert.reviews || 0})
+        </div>
+
         ${portfolioHTML}
-        <button>View Profile</button>
-        <button>Message</button>
+
+        <button onclick="viewProfile('${expert._id}')">View Profile</button>
+        <button onclick="messageExpert('${expert._id}')">Message</button>
       </div>
     `;
   });
 }
 
+// ===============================
+// SEARCH & FILTER
+// ===============================
 function searchExperts() {
   const location = document.getElementById("location").value;
   const service = document.getElementById("service").value;
-  const distance = document.querySelector('input[name="distance"]:checked')?.value;
+  const distance =
+    document.querySelector('input[name="distance"]:checked')?.value;
 
-  const filtered = experts.filter(e =>
-    (location === "" || e.location === location) &&
-    (service === "" || e.service === service) &&
-    (!distance || e.distance <= distance)
-  );
+  const filters = {};
 
-  loadExperts(filtered);
+  if (location) filters.location = location;
+  if (service) filters.service = service;
+  if (distance) filters.distance = distance;
+
+  loadExperts(filters);
 }
 
-loadExperts(experts);
+// ===============================
+// PROFILE & MESSAGE ACTIONS
+// ===============================
+function viewProfile(id) {
+  window.location.href = `/profile.html?id=${id}`;
+}
+
+function messageExpert(id) {
+  window.location.href = `/messages.html?user=${id}`;
+}
+
+// ===============================
+// INITIAL LOAD
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  loadExperts();
+});
