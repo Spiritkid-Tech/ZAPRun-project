@@ -1,3 +1,7 @@
-document.getElementById("supportBtn").addEventListener("click", function () {
-  window.location.href = "../../pages/public/support.html"; // support page
-});
+const homepageBtn = document.getElementById("homepageBtn");
+
+if (homepageBtn) {
+  homepageBtn.addEventListener("click", () => {
+    window.location.href = "../../pages/public/index.html";
+  });
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Your Local Expert</title>
+  <link rel="stylesheet" href="../../assets/css/pages/customer/select expert.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/chatgptimagedec302025102044am5380-i5up_igr7f6.svg" alt="company logo">
+    </div>
+  <nav>
+    <a href="../../pages/public/index.html">Home</a>
+    <a href="../../pages/public/services.html">Services</a>
+    <a href="../../pages/public/About.html">About Us</a>
+    <a href="../../pages/public/Contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Find Your Local Expert</h1>
+  <p>Search and hire a top-rated professional in your area</p>
+
+  <div class="search-box">
+    <select id="location">
+      <option value="">Select Location</option>
+      <option value="lagos">Lagos</option>
+      <option value="abuja">Abuja</option>
+      <option value="ibadan">Ibadan</option>
+      <option value="portharcourt">Port Harcourt</option>
+    </select>
+
+    <select id="service">
+      <option value="">Choose a Service</option>
+      <option value="plumber">Plumber</option>
+      <option value="electrician">Electrician</option>
+      <option value="carpenter">carpenter</option>
+    </select>
+
+    <button onclick="searchExperts()">Search</button>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+
+  <!-- ASIDE FILTERS -->
+  <aside class="filters">
+    <h3>Sort by</h3>
+    <select>
+      <option>Best match</option>
+      <option>Highest rated</option>
+    </select>
+
+    <hr>
+
+    <h3>Filter by Service</h3>
+    <label><input type="checkbox" value="plumber" class="service-filter"> Plumber</label>
+    <label><input type="checkbox" value="electrician" class="service-filter"> Electrician</label>
+    <label><input type="checkbox" value="carpenter" class="service-filter"> carpenter</label>
+
+    <!-- LINE BREAK THAT STAYS INSIDE ASIDE -->
+    <hr>
+
+    <!-- FILTER BY DISTANCE -->
+    <h3>Filter by Distance</h3>
+    <label><input type="radio" name="distance" value="5"> < 5km</label>
+    <label><input type="radio" name="distance" value="10"> 5km - 10km</label>
+    <label><input type="radio" name="distance" value="20"> > 10km</label>
+  </aside>
+
+  <!-- EXPERTS -->
+  <main class="experts" id="expertsList"></main>
+
+</section>
+
+<footer>
+  <p>© 2026 Zaprun. All rights reserved.</p>
+</footer>
+
+<script type="module" src="../../assets/js/pages/select expert.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: rgb(232, 238, 255);
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgb(232, 238, 255);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  background: rgb(232, 238, 255);
+  color: black;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.search-box {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-box select,
+.search-box button {
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.search-box button {
+  background: blue;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* CONTENT */
+.content {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* ASIDE */
+.filters {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.filters h3 {
+  margin-bottom: 10px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.filters hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* EXPERTS */
+.experts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.expert-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.expert-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.rating {
+  color: gold;
+  margin: 10px 0;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.portfolio img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* BUTTONS */
+.expert-card button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  background: #4e9cff;
+  color: white;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: #1f2a44;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}

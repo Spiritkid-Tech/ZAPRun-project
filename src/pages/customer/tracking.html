@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Artisan</title>
+  <link rel="stylesheet" href="../../assets/css/pages/customer/tracking.css" />
+</head>
+<body>
+
+<!-- Mapbox -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="tracking.css">
+</head>
+<body>
+
+<!-- MAP -->
+<header class="map-section">
+  <div id="map"></div>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+  <!-- LEFT: STATUS & PAYMENT -->
+  <section class="status-panel">
+    <div class="status-card">
+      <h2 id="serviceTitle">Service Tracking</h2>
+      <p class="order-id">Order ID: <strong id="orderIdText"></strong></p>
+
+      <div class="status-indicator" id="statusIndicator">
+        Waiting for updates…
+      </div>
+
+      <button id="payBtn" class="btn primary" disabled>
+        Complete task to unlock payment
+      </button>
+
+      <button class="btn outline">
+        Leave a Review
+      </button>
+    </div>
+  </section>
+
+  <!-- RIGHT: TIMELINE -->
+  <section class="timeline-panel">
+    <ul class="timeline" id="timeline">
+      <li data-step="1"><span class="dot"></span><p>Job accepted</p></li>
+      <li data-step="2"><span class="dot"></span><p>Expert on the way</p></li>
+      <li data-step="3"><span class="dot"></span><p>Expert arrived</p></li>
+      <li data-step="4"><span class="dot"></span><p>Job in progress</p></li>
+      <li data-step="5"><span class="dot"></span><p>Task completed</p></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  © ZAPrun Services
+</footer>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script type="module" src="../../assets/js/pages/tracking.js"></script>
+</body>
+</html>

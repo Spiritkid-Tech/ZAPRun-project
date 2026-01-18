@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="../../assets/css/pages/admin/dashboard.css">
+</head>
+<body>
+
+<div class="app">
+    <div class="overlay" id="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+        <img src="https://res.cloudinary.com/dkv3pybxd/image/upload/v1768108919/chatgptimagedec302025102044am5380-i5up_igr7f6.svg" alt="company logo">
+    </div>
+
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Analytics</a>
+      <a>Reports</a>
+      <a>Customer List</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a>Settings</a>
+      <a href="../../pages/public/support.html">Help & Support</a>
+      <a class="logout">Log out</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+        <div class="top-left">
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+            <div>
+                <h3 id="adminName">Admin</h3>
+                <small>Admin</small>
+            </div>
+        </div>
+
+        <input type="search" placeholder="Search anything..." />
+
+        <div class="top-icons">
+            🔔 👤
+        </div>
+    </header>
+
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card">
+        <p>Total Artisans</p>
+        <h2 id="totalArtisans">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Total Customers</p>
+        <h2 id="totalCustomers">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Jobs Today</p>
+        <h2 id="jobsToday">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Total Revenue</p>
+        <h2 id="totalRevenue">₦0</h2>
+      </div>
+    </section>
+
+    <!-- ARTISAN VERIFICATIONS -->
+    <section class="card">
+      <div class="card-header">
+        <h3>Artisan Verifications</h3>
+        <button>Filter</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Skill</th>
+            <th>ID Verification</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="verificationTable"></tbody>
+      </table>
+    </section>
+
+    <!-- RECENT JOBS -->
+    <section class="card">
+      <div class="card-header">
+        <h3>Recent Jobs</h3>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Job ID</th>
+            <th>Artisan</th>
+            <th>Service</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="jobsTable"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="../../assets/js/pages/admin-dashboard.js"></script>
+</body>
+</html>
