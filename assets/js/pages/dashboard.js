@@ -1,4 +1,4 @@
-// ================= SIDEBAR TOGGLE =================
+// SIDEBAR TOGGLE
 const menuBtn = document.querySelector(".menu-btn");
 const sidebar = document.querySelector(".sidebar");
 
@@ -25,7 +25,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// ================= API SETUP =================
+// API SETUP 
 const API_BASE = "https://zapruntech.onrender.com";
 const token = localStorage.getItem("accessToken");
 
@@ -84,7 +84,7 @@ async function loadDashboard() {
   }
 }
 
-// ================= RENDER JOBS =================
+//  RENDER JOBS
 function renderJobs(jobs) {
   const container = document.getElementById("jobsContainer");
   container.innerHTML = "";
@@ -115,7 +115,7 @@ function renderJobs(jobs) {
   });
 }
 
-// ================= ACCEPT JOB =================
+//ACCEPT JOB
 async function acceptJob(jobId) {
   try {
     const res = await fetch(`${API_BASE}/api/jobs/${jobId}/accept`, {
@@ -141,7 +141,7 @@ async function acceptJob(jobId) {
   }
 }
 
-// ================= DECLINE JOB =================
+//DECLINE JOB
 async function declineJob(jobId) {
   try {
     const res = await fetch(`${API_BASE}/api/jobs/${jobId}/decline`, {
@@ -167,5 +167,5 @@ async function declineJob(jobId) {
   }
 }
 
-// ================= INITIALIZE DASHBOARD =================
+//INITIALIZE DASHBOARD
 loadDashboard();

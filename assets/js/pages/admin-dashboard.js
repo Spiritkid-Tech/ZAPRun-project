@@ -1,8 +1,5 @@
-/*******************************************
- * ADMIN DASHBOARD – LIVE DATA CONTROLLER
- *******************************************/
-
-const API_BASE = "https://zapruntech.onrender.com/admin"; // Replace with your real admin API
+/* ADMIN DASHBOARD */
+const API_BASE = "https://zapruntech.onrender.com/admin";
 
 // ---------- STATS ----------
 async function loadStats() {
@@ -98,13 +95,11 @@ function initDashboard() {
   loadJobs();
 }
 
-// Auto refresh every 15 seconds
+// Auto refresh  for every 15 seconds
 setInterval(initDashboard, 15000);
 initDashboard();
 
-/********************************************
- * MOBILE SIDEBAR TOGGLE
- ********************************************/
+/*MOBILE SIDEBAR TOGGLE */
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");

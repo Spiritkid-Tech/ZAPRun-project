@@ -1,6 +1,6 @@
 const API_BASE_URL = "https://zapruntech.onrender.com";
 
-const signupForm = document.querySelector(".fill"); // The div with inputs
+const signupForm = document.querySelector(".fill");
 const signupBtn = signupForm.querySelector("button");
 
 signupBtn.addEventListener("click", async (e) => {

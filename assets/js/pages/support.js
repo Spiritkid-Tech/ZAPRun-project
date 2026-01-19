@@ -30,5 +30,4 @@ function sendMessage() {
 }
 // Placeholder for any future JavaScript functionality
 document.addEventListener('DOMContentLoaded', () => {
-    // You can add interactivity here if needed
 });

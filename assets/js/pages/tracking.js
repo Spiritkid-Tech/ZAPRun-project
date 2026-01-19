@@ -1,9 +1,7 @@
-/*************************************************
- * DYNAMIC ORDER TRACKING SYSTEM
- *************************************************/
+/* DYNAMIC ORDER TRACKING SYSTEM */
 
 /**
- * STEP MEANINGS (BACKEND CONTROLLED)
+ * STEP MEANINGS (CONTROLLED BY THE BACKEND)
  * 1 - Accepted
  * 2 - On the way
  * 3 - Arrived
