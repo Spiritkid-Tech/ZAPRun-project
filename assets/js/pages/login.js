@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      // 🔹 Make login request to your API
+      // login request sent to API
       const res = await fetch("https://zapruntech.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // 🔹 Save token and user data
+      //Save token and user data
       localStorage.setItem("accessToken", data.token);
       localStorage.setItem("artisan", JSON.stringify(data.user));
 
-      // 🔹 Redirect to dashboard
+      //Redirect to dashboard
       window.location.href = "../artisan/dashboard.html";
 
     } catch (err) {

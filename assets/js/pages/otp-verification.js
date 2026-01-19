@@ -5,9 +5,7 @@ const inputs = document.querySelectorAll(".inputs input");
 const otpMsg = document.getElementById("otpMsg");
 const resendBtn = document.getElementById("resendOtp");
 
-// ===============================
 // Auto move cursor between inputs
-// ===============================
 inputs.forEach((input, index) => {
   input.addEventListener("input", () => {
     if (input.value && index < inputs.length - 1) {
@@ -22,9 +20,7 @@ inputs.forEach((input, index) => {
   });
 });
 
-// ===============================
 // Submit OTP to API
-// ===============================
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -71,9 +67,7 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
-// ===============================
 // Resend OTP
-// ===============================
 resendBtn.addEventListener("click", async () => {
   otpMsg.style.color = "black";
   otpMsg.textContent = "Resending OTP...";

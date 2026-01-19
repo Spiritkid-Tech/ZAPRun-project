@@ -1,14 +1,9 @@
-// ===============================
-// CONFIG
-// ===============================
+// CONFIGURATION
 const API_BASE_URL = "https://zappruntech.onrender.com"; 
-// Example later: https://zaprun-api.onrender.com
 
 const expertsList = document.getElementById("expertsList");
 
-// ===============================
 // LOAD EXPERTS FROM BACKEND
-// ===============================
 async function loadExperts(filters = {}) {
   try {
     // Build query string dynamically
@@ -28,9 +23,7 @@ async function loadExperts(filters = {}) {
   }
 }
 
-// ===============================
 // RENDER EXPERTS
-// ===============================
 function renderExperts(experts) {
   expertsList.innerHTML = "";
 
@@ -70,9 +63,7 @@ function renderExperts(experts) {
   });
 }
 
-// ===============================
 // SEARCH & FILTER
-// ===============================
 function searchExperts() {
   const location = document.getElementById("location").value;
   const service = document.getElementById("service").value;
@@ -88,9 +79,7 @@ function searchExperts() {
   loadExperts(filters);
 }
 
-// ===============================
 // PROFILE & MESSAGE ACTIONS
-// ===============================
 function viewProfile(id) {
   window.location.href = `/profile.html?id=${id}`;
 }
@@ -99,9 +88,7 @@ function messageExpert(id) {
   window.location.href = `/messages.html?user=${id}`;
 }
 
-// ===============================
 // INITIAL LOAD
-// ===============================
 document.addEventListener("DOMContentLoaded", () => {
   loadExperts();
 });
