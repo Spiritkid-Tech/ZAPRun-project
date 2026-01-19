@@ -31,7 +31,7 @@ const token = localStorage.getItem("accessToken");
 
 // Redirect to login if no token
 if (!token) {
-  window.location.href = "../../pages/auth/login.html";
+  window.location.href = "../auth/login.html";
 }
 
 // ================= DASHBOARD LOADER =================
