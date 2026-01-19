@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("artisan", JSON.stringify(data.user));
 
       // 🔹 Redirect to dashboard
-      window.location.href = "../../pages/artisan/dashboard.html";
+      window.location.href = "../artisan/dashboard.html";
 
     } catch (err) {
       console.error("Login error:", err);

@@ -42,8 +42,7 @@ const confirmPassword = document.getElementById("confirmPassword").value.trim();
 
     // ✅ Signup success → redirect to OTP verification
     alert("Signup successful! Enter OTP sent to your email.");
-    window.location.href = "../../pages/auth/otp-verification.html";
-
+    window.location.href = "/pages/auth/otp-verification.html";
   } catch (err) {
     console.error("Signup error:", err);
     alert("Network error. Please try again.");
